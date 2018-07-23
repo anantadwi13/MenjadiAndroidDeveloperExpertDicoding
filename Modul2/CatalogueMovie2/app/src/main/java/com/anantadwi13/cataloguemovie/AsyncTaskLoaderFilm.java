@@ -23,8 +23,8 @@ public class AsyncTaskLoaderFilm extends AsyncTaskLoader<ArrayList<Film>>{
     public AsyncTaskLoaderFilm(Context context, String url) {
         super(context);
 
-        onContentChanged();
         this.url = url;
+        onContentChanged();
     }
 
     @Override
