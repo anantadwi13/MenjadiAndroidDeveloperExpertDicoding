@@ -22,7 +22,8 @@ public class DetailActivity extends AppCompatActivity {
         tvKata = findViewById(R.id.kata);
         tvTerjemahan = findViewById(R.id.terjemahan);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar()!=null)
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Word kata = getIntent().getParcelableExtra(EXTRA);
         if (kata!=null){

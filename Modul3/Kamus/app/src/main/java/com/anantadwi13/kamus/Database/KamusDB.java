@@ -76,7 +76,7 @@ public class KamusDB {
         return TABLE_NAME;
     }
 
-    public Word getWord(int id,@Nullable Integer type){
+    /*public Word getWord(int id,@Nullable Integer type){
         if (database == null) throw new SQLException("Open Database First!");
 
         String TABLE_NAME = this.TABLE_NAME;
@@ -94,7 +94,7 @@ public class KamusDB {
 
         cursor.close();
         return kata;
-    }
+    }*/
 
     public ArrayList<Word> getWords(String cari, @Nullable Integer limit, @Nullable Integer type){
         if (database == null) throw new SQLException("Open Database First!");
@@ -125,7 +125,7 @@ public class KamusDB {
         return words;
     }
 
-    public ArrayList<Word> getAllWords(@Nullable Integer limit,@Nullable Integer type){
+    /*public ArrayList<Word> getAllWords(@Nullable Integer limit,@Nullable Integer type){
         if (database == null) throw new SQLException("Open Database First!");
 
         String TABLE_NAME = this.TABLE_NAME;
@@ -150,7 +150,7 @@ public class KamusDB {
 
         cursor.close();
         return words;
-    }
+    }*/
 
     public long insert(Word kata,@Nullable Integer type){
         if (database == null) throw new SQLException("Open Database First!");

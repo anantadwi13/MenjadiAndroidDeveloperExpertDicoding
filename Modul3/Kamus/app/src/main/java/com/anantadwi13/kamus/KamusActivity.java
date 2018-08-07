@@ -55,11 +55,13 @@ public class KamusActivity extends AppCompatActivity
         switch (TYPE){
             case ENG_IND:
                 navigationView.getMenu().findItem(R.id.engind).setChecked(true);
-                getSupportActionBar().setTitle(getString(R.string.english_indonesia));
+                if (getSupportActionBar()!=null)
+                    getSupportActionBar().setTitle(getString(R.string.english_indonesia));
                 break;
             case IND_ENG:
                 navigationView.getMenu().findItem(R.id.indeng).setChecked(true);
-                getSupportActionBar().setTitle(getString(R.string.indonesia_english));
+                if (getSupportActionBar()!=null)
+                    getSupportActionBar().setTitle(getString(R.string.indonesia_english));
                 break;
         }
     }

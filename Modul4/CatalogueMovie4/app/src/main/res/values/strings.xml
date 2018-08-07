@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Catalogue Movie</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="input_title">Type Movie Title</string>
+    <string name="search_result">Search Result</string>
+    <string name="settings_lang">Languages</string>
+    <string name="settings_lang_child">Change Android system language</string>
+    <string name="overview">Overview</string>
+    <string name="language">Language</string>
+    <string name="rating">Rating</string>
+    <string name="favourite">Favourite</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="daily_reminder_text">Catalogue Movie missing you…</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="daily_reminder_sub">Remind you to open this app</string>
+    <string name="release_today_reminder">Release Today Reminder</string>
+    <string name="release_today_reminder_sub">Remind you about new released film</string>
+</resources>

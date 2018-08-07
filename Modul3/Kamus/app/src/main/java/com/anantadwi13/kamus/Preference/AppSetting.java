@@ -6,11 +6,9 @@ import android.content.SharedPreferences;
 public class AppSetting {
     private static String PREFS_NAME = "appsetting";
     private SharedPreferences sharedPreferences;
-    private Context context;
     private static String KEY_FIRST_LAUNCH = "firstlaunch";
 
     public AppSetting(Context context) {
-        this.context = context;
         sharedPreferences = context.getSharedPreferences(PREFS_NAME,Context.MODE_PRIVATE);
     }
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="navigation_drawer_open">Buka Navigasi</string>
+    <string name="navigation_drawer_close">Tutup Navigasi</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="search">Cari</string>
+    <string name="now_playing">Sedang Dimainkan</string>
+    <string name="upcoming">Yang Akan Datang</string>
+    <string name="input_title">Masukkan Judul Film</string>
+    <string name="search_result">Hasil Pencarian</string>
+    <string name="settings_lang">Bahasa</string>
+    <string name="settings_lang_child">Ganti bahasa sistem Android</string>
+    <string name="overview">Sinopsis</string>
+    <string name="language">Bahasa</string>
+    <string name="rating">Nilai</string>
+    <string name="favourite">Favorit</string>
+    <string name="daily_reminder_text">Buka Katalog Film kuy…</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="daily_reminder_sub">Remind you to open this app</string>
+    <string name="release_today_reminder_sub">Remind you about new released film</string>
+</resources>

@@ -6,8 +6,10 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -44,12 +46,22 @@ public class MainActivity extends AppCompatActivity {
         appSetting = new AppSetting(this);
 
         isFirstLaunch = appSetting.getFirstLaunch();
+
+        if (isFirstLaunch)
+            progressBarImport.setVisibility(View.VISIBLE);
+        else
+            progressBarLoading.setVisibility(View.VISIBLE);
+
         task = new AsyncTaskLoaderKamus();
         task.execute();
+
+        NotificationCompat.Builder aaa = new NotificationCompat.Builder(this);
+
     }
 
     @Override
     protected void onDestroy() {
+        Log.e(getClass().getSimpleName(), "onDestroy: DIDESTROY");
         if (task!=null)
             task.cancel(true);
         super.onDestroy();
@@ -88,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Void... voids) {
             if (isFirstLaunch) {
-                progressBarImport.setVisibility(View.VISIBLE);
                 ArrayList<Word> engIndWords = loadWordsFromRaw(ENG_IND_TYPE);
                 ArrayList<Word> indEngWords = loadWordsFromRaw(IND_ENG_TYPE);
 
@@ -126,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
             }
             else
             {
-                progressBarLoading.setVisibility(View.VISIBLE);
                 try {
                     synchronized (this) {
                         this.wait(500);
@@ -140,9 +150,16 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Boolean aBoolean) {
+            Log.e(getClass().getSimpleName(), "onPostExecute: SUKSES");
             Intent kamusActivity = new Intent(MainActivity.this,KamusActivity.class);
             startActivity(kamusActivity);
             finish();
+        }
+
+        @Override
+        protected void onCancelled() {
+            Log.e(getClass().getSimpleName(), "onCancelled: DICANCEL");
+            super.onCancelled();
         }
 
         @Override

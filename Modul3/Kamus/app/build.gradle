@@ -2,12 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        config {
-            keyAlias 'test'
-            keyPassword 'test123'
-            storeFile file('D:/WORK/ANDROID/MADE/test.jks')
-            storePassword 'test123'
-        }
     }
     compileSdkVersion 27
     defaultConfig {
